@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    margin: 0;
+}
+
+.main_menu {
+    background-color: var(--main-bg);
+}
+
+.navbar {
+    color: #FFF;
+    background-color: var(--main-bg);
+    padding: 5 rem;
+}
+
+    .navbar li {
+        margin-left: 2rem;
+    }
+
+    .navbar a {
+        color: #fff;
+        font-size: 1.8rem;
+    }
+
+
+        .navbar a:hover {
+            color: var(--main-color);
+        }
+
+.main_header_left {
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_header_right {
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--main-bg);
+}
+
+    footer p {
+        margin: 0;
+        text-align: center;
+        color: #fff;
+        font-size: 1.4rem;
+        line-height: 5rem;
+        margin-top: auto;
+    }
+.gradient-custom-3 {
+    /* fallback for old browsers */
+    background: #84fab0;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+}
+
+.gradient-custom-4 {
+    /* fallback for old browsers */
+    background: black;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+}
+
+.regbg {
+    background-image: url('https://cdn.hipwallpaper.com/i/1/54/qKrPAn.jpg');
+}
+
+.mine {
+    font-size: 1.4rem;
+}
+
+.mybg {
+    background-color: #E6E6E3;
+}
