@@ -1,0 +1,316 @@
+<!DOCTYPE html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Add Product</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Lightbox-->
+    <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
+    <!-- Range slider-->
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+    <!-- Bootstrap select-->
+    <link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
+    <!-- Owl Carousel-->
+    <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.theme.default.css">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/style.violet.css" id="theme-stylesheet">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+
+<style>
+    	
+       @import url(https://fonts.googleapis.com/css?family=Varela);
+/*error*/
+
+.error-msg {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color: #D8000C;
+  background-color: #FFBABA;
+  width:640px;
+  margin-left:20px;
+}
+
+
+
+
+
+body {
+	background-image: url("images/addproductbg.png");
+	background-size: 900px;
+	background-position: right;
+  font-family: 'Varela', sans-serif;
+  font-size: 14px;
+  position: relative;
+  background-repeat: no-repeat;
+  
+}
+
+label {
+  margin-top: 6px;
+  line-height: 17px;
+}
+
+a {
+  color: #fff;
+}
+
+a:focus,
+a:hover {
+  color: #008080;
+}
+
+.checkbox-inline+.checkbox-inline,
+.radio-inline+.radio-inline {
+  margin-top: 6px;
+}
+
+/******* Login Page *******/
+
+.relative {
+  position: relative;
+}
+
+.login-container-wrapper .logo,
+.login-container-wrapper .welcome {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.login-container-wrapper .logo {
+  text-align: center;
+  position: absolute;
+  top: -42px;
+  margin: 0 auto;
+  width: 25%;
+  left: 37.5%;
+  border-radius: 50%;
+  background-color: #344455;
+  padding: 25px;
+  box-shadow: 0px 0px 9px 2px #344454;
+}
+
+.login-container-wrapper {
+  max-width: 400px;
+  margin: 10% auto 8%;
+  padding: 40px;
+  box-sizing: border-box;
+  background: rgba(57, 89, 116, 0.8);
+  box-shadow: 1px 1px 10px 1px #000000, 8px 8px 0px 0px #344454, 12px 12px 10px 0px #000000;
+  position: relative;
+  padding-top: 80px;
+}
+
+.logo .fa {
+  font-size: 50px;
+}
+.login input:focus + .fa{
+  color:#fff;
+}
+.login-form .form-group {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.login-form i {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: #93a5ab;
+}
+
+.login-form .input-lg {
+  font-size: 16px;
+  height: 52px;
+  padding: 10px 25px;
+  border-radius: 0;
+}
+
+.login input[type="email"],
+.login input[type="password"],
+.login input:focus {
+  background-color: rgba(40, 52, 67, 0.75);
+  border: 1px solid #4a525f;
+  color: #eee;
+  border-left: 4px solid #93a5ab;
+}
+
+.login input:focus {
+  border-left: 4px solid #ccd8da;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: rgba(40, 52, 67, 0.75)!important;
+  background-image: none;
+  color: rgb(0, 0, 0);
+  border-color: #FAFFBD;
+}
+
+.login .checkbox label,
+.login .checkbox a {
+  color: #ddd;
+}
+
+.btn-success {
+  background-color: transparent;
+  background-image: none;
+  padding: 8px 50px;
+  border-radius: 0;
+  border: 2px solid #93a5ab;
+  box-shadow: inset 0 0 0 0 #7692A7;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+
+.btn-success:focus,
+.btn-success:hover,
+.btn-success.active,
+.btn-success:active {
+  background-color: transparent;
+  border-color: #fff;
+  box-shadow: inset 0 0 100px 0 #7692A7;
+  color: #FFF;
+}
+#particles-js {
+/*   background: cornflowerblue; */
+  width:100%;
+  height:100%;
+  position:absolute;
+  z-index:-1;
+}
+	</style>
+</head>
+<body>
+    {{> market_nav }}
+
+
+    {{#if message}}
+    <div class="error-msg">
+  <i class="fa fa-times-circle"></i>
+  {{message}}
+ </div>
+    {{/if}}
+    <br />
+    <br />
+
+    <section>
+        <div class="container" style="position:relative; margin-top:-85px; margin-left: -50px;">
+		<div class="login-container-wrapper clearfix">
+			<div class="logo">
+				<i class="fas fa-sign-in-alt"></i>
+			</div>
+			<div class="welcome"><strong>Hey,</strong> Add the product below</div>
+
+			<form action="/addproduct" method="POST" enctype="multipart/form-data" class="form-horizontal login-form" id="prodForm">
+				<div class="form-group relative">
+					<input type="text" name="name" placeholder="Enter the product name" class="form-control form-control-lg" required/>
+					<i class="fa fa-user"></i>
+				</div>
+				<div class="form-group relative">
+					<input type="number" name="activetime" placeholder="Active time (in hours)" class="form-control form-control-lg" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                  title="Numbers only" required/>
+					<i class="fas fa-stopwatch"></i>
+				</div>
+        <div class="form-group relative">
+          <textarea placeholder="Product Description" name="description" form="prodForm"  rows="3" class = "form-control" required></textarea>
+          <i class="fas fa-comment"></i>
+				</div>
+				<div class="form-group relative">
+					<input type="number" name="startingbid" placeholder="Enter desired starting bid in ₹" class="form-control form-control-lg" required />
+					<i class="fas fa-rupee-sign"></i>
+				</div>
+				
+				<div class="form-outline mb-4">
+					<div class="welcome">Upload 4 product images</div>
+					<input type="file" id ="img" name="productimages" multiple accept="image/*"  onchange="Filevalidation()" required/>
+          <div style="color: #D8000C; margin: 10px 0px; padding:12px;">
+          <p id="msg" ></p>
+          </div>
+				</div>
+        <script>
+          Filevalidation = () => {
+        const fi = document.getElementById('img');
+        // Check if any file is selected.
+        if (fi.files.length == 4) {
+            for (const i = 0; i <= fi.files.length - 1; i++) {
+                const fsize = fi.files.item(i).size;
+                const file = Math.round((fsize / 1024));
+                // The size of the file.
+                if (file >= 4096) {
+                    document.getElementById('msg').innerHTML= "Files too Big, please select files less than 4mb";
+                    document.getElementById('sub').disabled = true;
+                }
+                else
+                {
+                   document.getElementById('msg').innerHTML= '';
+                  document.getElementById('sub').disabled = false;
+                }
+            }
+          }
+          else{
+             document.getElementById('msg').innerHTML= "Please select 4 images";
+             document.getElementById('sub').disabled = true;
+          }
+        }
+
+        </script>
+			  <div class="form-group">
+			    <input type="submit" value="Add Product" disabled="disabled" id="sub" class="btn btn-primary btn-lg btn-block signin-btn text-uppercase mb-4">
+			  </div>
+	
+			</form>
+		</div>
+	</div>
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/lightbox2/js/lightbox.min.js"></script>
+    <script src="vendor/nouislider/nouislider.min.js"></script>
+    <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="vendor/owl.carousel2/owl.carousel.min.js"></script>
+    <script src="vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
+    {{!-- <script src="js/front.js"></script> --}}
+
+
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+
+</body>
+</html>

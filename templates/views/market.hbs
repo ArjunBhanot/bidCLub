@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>BidClub Products</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Lightbox-->
+    <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
+    <!-- Range slider-->
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+    <!-- Bootstrap select-->
+    <link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
+    <!-- Owl Carousel-->
+    <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.theme.default.css">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/market.css" />
+    <link rel="stylesheet" href="css/style.violet.css" id="theme-stylesheet">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+<style>
+
+ body{
+            background-color: #ffffff;
+background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwellimaginethat.com.au%2Fwp-content%2Fuploads%2F2016%2F11%2Fpurple-background.jpg&f=1&nofb=1');
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: top left;
+        }
+ 
+
+.top{
+  height:400px;
+}
+
+.top img{ 
+  width: 100%;
+  height: auto;
+}
+
+
+h3{
+      text-align: center;
+      font-size: 30px;
+      margin: 0;
+      padding-top: 10px;
+      }
+      a{
+      text-decoration: none;
+      }
+      .gallery{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 0;
+      }
+      .content{
+      background-color: antiquewhite;
+      width: 24%;
+      margin: 15px;
+      box-sizing: border-box;
+      float: left;
+      text-align: center;
+      border-radius:10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding-top: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: .4s;
+      }
+      .content:hover{
+      box-shadow: 0 0 11px rgba(33,33,33,.2);
+      transform: translate(0px, -8px);
+      transition: .6s;
+      }
+      .img1{
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+      }
+      p{
+      text-align: center;
+      color: #b2bec3;
+      padding: 0 8px;
+      }
+      h6{
+      font-size: 26px;
+      text-align: center;
+      color: #222f3e;
+      margin: 0;
+      }
+     
+      .buy-1{
+      background-color: #2183a2;
+      }
+      .buy-2{
+      background-color: #3b3e6e;
+      }
+      .buy-3{
+      background-color: #0b0b0b;
+      }
+      @media(max-width: 1000px){
+      .content{
+      width: 46%;
+      }
+      }
+      @media(max-width: 750px){
+      .content{
+      width: 100%;
+      }
+      }
+
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+
+@media(max-width:1000px){
+  .top{
+    height: 300px;
+  }
+  .gallery{ 
+    margin: 0;
+  }
+}
+
+@media(min-width: 1150px){
+  .gallery{ 
+    margin-top:150px;
+  }
+}
+
+@media(max-width:425px){
+  .gallery{ 
+    width: 90%;
+  }
+}
+
+/***********************/
+
+
+
+
+/* search bar*/
+
+.containersearch {
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:250px;
+}
+
+
+.heading {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.searchInputWrapper {
+  position: relative;
+}
+
+.searchInput {
+  width: 20rem;
+  height: 3rem;
+  padding: 0 1rem; 
+  border-radius: 2rem;
+  border: 1 px solid black;
+  transition: transform 0.1s ease-in-out;
+}
+
+::placeholder {
+  color: #a1a1a1;
+}
+
+/* hide the placeholder text on focus */
+:focus::placeholder {
+  text-indent: -999px
+}
+
+.searchInput:focus {
+  outline: none;
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.searchInputIcon {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.5rem;
+  color: #a1a1a1;
+  transition: all 0.1s ease-in-out;
+}
+
+.container:focus-within > 
+.searchInputWrapper > .searchInputIcon {
+  right: 0.2rem;
+}
+
+.error-msg {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color: green;
+  background-color: lightgreen;
+  width:max-content;
+  margin-left: 40px;
+  margin:auto;
+
+
+}
+
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  padding: 25px;
+  margin: 0;
+  border: 0;
+  background-color: #030103;
+  transition: 0.2s ease background-color;
+  border-radius: 50%;
+}
+
+button.shadow {
+  box-shadow: 0 10px 30px #d0d0d0;
+}
+
+button i.fas {
+  display: block;
+  line-height: normal;
+}
+
+</style>
+
+</head>
+
+<body class="marketbg">
+  {{!-- <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div> --}}
+{{> market_nav}}
+
+    
+
+
+    <div class="container top">
+        
+            <img src="/images/marleth.png" alt="top">
+        </section> 
+        </div>
+
+
+
+      <div class="containersearch ">
+  <h1 class="heading" style="padding-top: 50px; color:white;">Search Products</h1>
+  <div class="searchInputWrapper">
+    <form action="/search" method="POST">
+    <input class="searchInput" type="text" name="prods" placeholder="Type product name, features....">
+     <button type="submit" class="shadow"><i style="margin-top:-10px; margin-left: -5px" class="fas fa-search"></i></button>
+    </input>
+    </form>
+  </div>
+</div>
+<br>
+<center>
+{{#if message}}
+		<div class="error-msg my-5">
+			{{message}}
+		</div>
+	{{/if}}
+</center>
+
+<br><br>
+  
+
+ <div class="gallery">
+   {{#each data}}
+      <div class="content">
+        <img class="img1" src="https://{{this.image1}}">
+        <h3>{{this.name}}</h3>
+        <p style="color: black;">Starting bid: ₹{{this.startingbid}}</p>
+        <h6>Current bid: ₹{{this.currentbid}}</h6>
+        
+        <a class="btn btn-primary my-3" href="/market/{{this.id}}">Bid Now</a>
+      </div>
+      {{/each}}
+    </div>
+       
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/lightbox2/js/lightbox.min.js"></script>
+        <script src="vendor/nouislider/nouislider.min.js"></script>
+        <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+        <script src="vendor/owl.carousel2/owl.carousel.min.js"></script>
+        <script src="vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
+        {{!-- <script src="js/front.js"></script> --}}
+
+
+        <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>My Products</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Lightbox-->
+    <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
+    <!-- Range slider-->
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+    <!-- Bootstrap select-->
+    <link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
+    <!-- Owl Carousel-->
+    <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.theme.default.css">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/style.violet.css" id="theme-stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+    
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color:#A7A1AE;
+ background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect fill='none' stroke-width='1' id='a' x='-400' y='-300' width='800' height='600'/%3E%3C/defs%3E%3Cg style='transform-origin:center'%3E%3Cg transform='rotate(34.2 0 0)' style='transform-origin:center'%3E%3Cg transform='rotate(-160 0 0)' style='transform-origin:center'%3E%3Cg transform='translate(1000 750)'%3E%3Cuse stroke='%23000' href='%23a' transform='rotate(10 0 0) scale(1.1)'/%3E%3Cuse stroke='%230f0d11' href='%23a' transform='rotate(20 0 0) scale(1.2)'/%3E%3Cuse stroke='%231d1922' href='%23a' transform='rotate(30 0 0) scale(1.3)'/%3E%3Cuse stroke='%232c2633' href='%23a' transform='rotate(40 0 0) scale(1.4)'/%3E%3Cuse stroke='%233a3344' href='%23a' transform='rotate(50 0 0) scale(1.5)'/%3E%3Cuse stroke='%23494055' href='%23a' transform='rotate(60 0 0) scale(1.6)'/%3E%3Cuse stroke='%23584c66' href='%23a' transform='rotate(70 0 0) scale(1.7)'/%3E%3Cuse stroke='%23665977' href='%23a' transform='rotate(80 0 0) scale(1.8)'/%3E%3Cuse stroke='%23756688' href='%23a' transform='rotate(90 0 0) scale(1.9)'/%3E%3Cuse stroke='%23837399' href='%23a' transform='rotate(100 0 0) scale(2)'/%3E%3Cuse stroke='%23927faa' href='%23a' transform='rotate(110 0 0) scale(2.1)'/%3E%3Cuse stroke='%23a18cbb' href='%23a' transform='rotate(120 0 0) scale(2.2)'/%3E%3Cuse stroke='%23af99cc' href='%23a' transform='rotate(130 0 0) scale(2.3)'/%3E%3Cuse stroke='%23bea6dd' href='%23a' transform='rotate(140 0 0) scale(2.4)'/%3E%3Cuse stroke='%23ccb2ee' href='%23a' transform='rotate(150 0 0) scale(2.5)'/%3E%3Cuse stroke='%23DBBFFF' href='%23a' transform='rotate(160 0 0) scale(2.6)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+  
+ 
+}
+
+
+
+
+
+h1 {
+  font-size:3em; 
+  font-weight: 300;
+  line-height:1em;
+  text-align: center;
+  color: #4DC3FA;
+}
+
+h2 {
+  font-size:1em; 
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height:1em;
+  padding-bottom: 2em;
+  color: #FB667A;
+}
+
+h2 a {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FB667A;
+  text-decoration: none;
+}
+
+.blue { color: #185875; }
+.purple { color: #9055A2; }
+
+.containert th h1 {
+	  font-weight: bold;
+	  font-size: 1em;
+  text-align: left;
+  color: #185875;
+}
+
+.containert td {
+	  font-weight: normal;
+	  font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
+	        box-shadow: 0 2px 2px -2px #0E1119;
+        color:white;
+}
+
+.containert {
+	  text-align: left;
+	  overflow: hidden;
+	  width: 80%;
+	  margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+}
+
+.containert td, .containert th {
+	  padding-bottom: 2%;
+	  padding-top: 2%;
+  padding-left:2%;  
+}
+
+/* Background-color of the odd rows */
+.containert tr:nth-child(odd) {
+	  background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+.containert tr:nth-child(even) {
+	  background-color: #2C3446;
+}
+
+.containert th {
+	  background-color: #ebeef3;
+}
+
+.containert td:first-child { color: #FB667A; }
+
+.containert tr:hover {
+   background-color: #464A52;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+	        box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.containert td:hover {
+  background-color: #b688f1;
+  color: #f5f5f3;
+  font-weight: bold;
+  
+  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  
+  transition-delay: 0s;
+	  transition-duration: 0.4s;
+	  transition-property: all;
+  transition-timing-function: line;
+}
+
+@media (max-width: 800px) {
+.containert td:nth-child(4),
+.containert th:nth-child(4) { display: none; }
+}
+
+
+
+/* modal for delete*/
+
+.modal-confirm {		
+		color: #636363;
+		width: 400px;
+		margin: 30px auto;
+	}
+	.modal-confirm .modal-content {
+		padding: 20px;
+		border-radius: 5px;
+		border: none;
+        text-align: center;
+		font-size: 14px;
+	}
+	.modal-confirm .modal-header {
+		border-bottom: none;   
+        position: relative;
+	}
+	.modal-confirm h4 {
+		text-align: center;
+		font-size: 26px;
+		margin: 30px 0 -10px;
+	}
+	.modal-confirm .close {
+        position: absolute;
+		top: -5px;
+		right: -2px;
+	}
+	.modal-confirm .modal-body {
+		color: #999;
+	}
+	.modal-confirm .modal-footer {
+		border: none;
+		text-align: center;		
+		border-radius: 5px;
+		font-size: 13px;
+		padding: 10px 15px 25px;
+	}
+	.modal-confirm .modal-footer a {
+		color: #999;
+	}		
+	.modal-confirm .icon-box {
+		width: 80px;
+		height: 80px;
+		margin: 0 auto;
+		border-radius: 50%;
+		z-index: 9;
+		text-align: center;
+		border: 3px solid #f15e5e;
+	}
+	.modal-confirm .icon-box i {
+		color: #f15e5e;
+		font-size: 46px;
+		display: inline-block;
+		margin-top: 13px;
+	}
+    .modal-confirm .btn {
+        color: #fff;
+        border-radius: 4px;
+		background: #60c7c1;
+		text-decoration: none;
+		transition: all 0.4s;
+        line-height: normal;
+		min-width: 120px;
+        border: none;
+		min-height: 40px;
+		border-radius: 3px;
+		margin: 0 5px;
+		outline: none !important;
+    }
+	.modal-confirm .btn-info {
+        background: #c1c1c1;
+    }
+    .modal-confirm .btn-info:hover, .modal-confirm .btn-info:focus {
+        background: #a8a8a8;
+    }
+    .modal-confirm .btn-danger {
+        background: #f15e5e;
+    }
+    .modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+        background: #ee3535;
+    }
+	.trigger-btn {
+		display: inline-block;
+	}
+
+
+    </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+
+ <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+
+
+
+
+
+</head>
+<body>
+  
+
+
+        
+ {{> market_nav}}
+
+    <div class="container py-3">
+        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center rounded opacity-50" style="background: url(images/myprod1.png);">
+            <div class="container py-5">
+                <div class="row px-4 px-lg-5">
+                    <div class="col-lg-6">
+                        <p class="text-muted small text-uppercase mb-2">THE BIDDING REVOLUTION IS HERE</p>
+                        <h3 class="h2 text-uppercase mb-3" style="font-family: roboto; color: black;    ">YOUR PRODUCTS</h3>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        </div>
+
+
+{{!-- in the form of table --}}
+
+<div class="container">
+			<div class="row justify-content-center">
+				
+
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					
+					<div class="table-wrap">
+						<table class="table containert">
+						  <thead class="thead-primary">
+						    <tr>
+						    	<th>Product Image</th>
+						    	<th>Product</th>
+						      <th>Time left</th>
+    
+						      <th>Starting bid</th>
+						      <th>Current bid</th>
+                              <th> See Product Details</th>
+                              <th> Delete product</th>
+						     
+						 
+						    </tr>
+						  </thead>
+              
+						  <tbody id="result">
+                              
+						    
+
+                        {{#each details}}
+                        
+                        
+                        <tr><td rowspan="2"><img class ="mypimage" height = '50' width = '50' src = "https://{{this.image1}}"></td>
+
+                        <script>
+                            
+                            var pname="{{this.name}}";
+                            var startingbid="{{this.startingbid}}";
+                            var currentbid="{{this.currentbid}}";   
+                            var timel;
+                            var initDate = new Date("{{this.date}}");
+                                            var activetime = parseInt("{{this.activetime}}");
+                                            initDate.setHours(initDate.getHours() + activetime);
+                                            var countDownDate = initDate.getTime();
+                                            var now = new Date().getTime(); 
+                                            var distance = countDownDate - now;
+
+                                            if(distance>0){
+                                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                            }
+
+                                            if(days>0)
+                                            {
+                                            timel = days + " days, " + hours +" "+ ' hours';
+                                            }
+                                            else if(hours>0)
+                                            {
+                                                timel = hours + " hours, " +" " + minutes + " minutes";
+                                            }
+                                            else if(minutes>0)
+                                            {
+                                                timel = minutes + " minutes";
+                                            }
+                                            else if(seconds>0)
+                                            {
+                                                timel = seconds + " seconds";
+                                            }
+                                            else
+                                            {
+                                                timel = "Time Over";
+                                            }
+                            
+                                           
+                                        var html="";
+                                        
+                                   
+                                        
+                                        html="<td>"+pname+"</td><td>"+timel+"</td><td>"+startingbid+"</td><td>"+currentbid+"</td><td><a class='btn btn-primary' href='/market/{{this._id}}/'>Details</a> </td><td> <a href='#myModal' class='btn btn-danger trigger-btn' data-toggle='modal'>Delete</a></td>";
+                                        
+                                        document.getElementById("result").innerHTML += html;
+                                        
+                          
+
+                            </script>
+                            </tr>
+
+                            <!-- Modal HTML -->
+ <form method = 'POST' action = '/deleteprod/{{this._id}}'>
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+     
+			<div class="modal-header">
+				<div class="icon-box">
+					<i class="fas fa-trash"></i>
+				</div>				
+        
+				<h4 class="modal-title">Are you sure?</h4>	
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<p>Do you really want to delete these records? This process cannot be undone.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+				<input type="submit" class="btn btn-danger" value="Delete"></input>
+			</div>
+      
+		</div>
+	</div>
+</div>  
+</form> 
+ 
+                            
+                        {{/each}}
+                        
+
+						  </tbody>
+						</table>
+            <br>
+            <br>
+            <br>
+            <br>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+</div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/lightbox2/js/lightbox.min.js"></script>
+    <script src="vendor/nouislider/nouislider.min.js"></script>
+    <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="vendor/owl.carousel2/owl.carousel.min.js"></script>
+    <script src="vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
+    <script src="js/front.js"></script>
+   
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+</body>
+</html>

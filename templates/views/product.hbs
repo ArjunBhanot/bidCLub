@@ -1,0 +1,548 @@
+<!DOCTYPE html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{{details.name}}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Lightbox-->
+    <link rel="stylesheet" href="/vendor/lightbox2/css/lightbox.min.css">
+    <!-- Range slider-->
+    <link rel="stylesheet" href="/vendor/nouislider/nouislider.min.css">
+    <!-- Bootstrap select-->
+    <link rel="stylesheet" href="/vendor/bootstrap-select/css/bootstrap-select.min.css">
+    <!-- Owl Carousel-->
+    <link rel="stylesheet" href="/vendor/owl.carousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/vendor/owl.carousel2/assets/owl.theme.default.css">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="/css/style.violet.css" id="theme-stylesheet">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/img/favicon.png">
+<script>
+        // Set the date we're counting down to
+
+        var initDate = new Date("{{initDate}}");
+        var activetime = parseInt("{{activetime}}");
+        
+        initDate.setHours(initDate.getHours() + activetime);
+
+        //var nx = new Date(initDate);
+        var countDownDate = initDate.getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            if(distance>0){
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+            }
+
+            // If the count down is over, write some text
+            else{
+                clearInterval(x);
+                document.getElementById("days").innerText = "0";
+                document.getElementById("hours").innerText = "0";
+                document.getElementById("minutes").innerText = "0";
+                document.getElementById("seconds").innerText = "0";
+
+            }
+        }, 10);
+
+    </script>
+<style>
+  body{
+    background-color: #D2FEFF;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23D2FEFF'/%3E%3Cstop offset='1' stop-color='%23D09AFF'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+  }
+
+
+  select {
+
+  /* styling */
+  background-color: white;
+  border: thin solid blue;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+
+  /* reset */
+
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
+/* arrows */
+
+select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, purple 50%),
+    linear-gradient(135deg, purple 50%, transparent 50%),
+    linear-gradient(to right, rgb(233, 114, 233), rgb(233, 114, 233));
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+select:focus {
+  background-image:
+    linear-gradient(45deg, white 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, white 50%),
+    linear-gradient(to right, gray, gray);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+  border-color: grey;
+  outline: 0;
+}
+
+
+/* modal for delete*/
+
+.modal-confirm {		
+		color: #636363;
+		width: 400px;
+		margin: 30px auto;
+	}
+	.modal-confirm .modal-content {
+		padding: 20px;
+		border-radius: 5px;
+		border: none;
+        text-align: center;
+		font-size: 14px;
+	}
+	.modal-confirm .modal-header {
+		border-bottom: none;   
+        position: relative;
+	}
+	.modal-confirm h4 {
+		text-align: center;
+		font-size: 26px;
+		margin: 30px 0 -10px;
+	}
+	.modal-confirm .close {
+        position: absolute;
+		top: -5px;
+		right: -2px;
+	}
+	.modal-confirm .modal-body {
+		color: #999;
+	}
+	.modal-confirm .modal-footer {
+		border: none;
+		text-align: center;		
+		border-radius: 5px;
+		font-size: 13px;
+		padding: 10px 15px 25px;
+	}
+	.modal-confirm .modal-footer a {
+		color: #999;
+	}		
+	.modal-confirm .icon-box {
+		width: 80px;
+		height: 80px;
+		margin: 0 auto;
+		border-radius: 50%;
+		z-index: 9;
+		text-align: center;
+		border: 3px solid #f15e5e;
+	}
+	.modal-confirm .icon-box i {
+		color: #f15e5e;
+		font-size: 46px;
+		display: inline-block;
+		margin-top: 13px;
+	}
+    .modal-confirm .btn {
+        color: #fff;
+        border-radius: 4px;
+		background: #60c7c1;
+		text-decoration: none;
+		transition: all 0.4s;
+        line-height: normal;
+		min-width: 120px;
+        border: none;
+		min-height: 40px;
+		border-radius: 3px;
+		margin: 0 5px;
+		outline: none !important;
+    }
+	.modal-confirm .btn-info {
+        background: #c1c1c1;
+    }
+    .modal-confirm .btn-info:hover, .modal-confirm .btn-info:focus {
+        background: #a8a8a8;
+    }
+    .modal-confirm .btn-danger {
+        background: #f15e5e;
+    }
+    .modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+        background: #ee3535;
+    }
+	.trigger-btn {
+		display: inline-block;
+	}
+
+
+
+</style>
+</head>
+<body>
+    {{> market_nav}}
+
+   
+
+    <div class="page-title-overlap bg-dark pt-4" style="height: 140px;">
+        <div class="container d-lg-flex justify-content-between py-2 py-lg-3">
+          <div class="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
+          </div>
+          <div class="order-lg-1 pe-lg-4 text-center text-lg-start">
+               
+              {{#each details}}
+            <h1 class="h3 text-light mb-0">{{this.name}}</h1>
+            {{/each}}
+
+           
+         
+
+          </div>
+          
+        </div>
+        
+      </div>
+      
+<div class="prod-profile">
+
+
+
+{{!-- <div class="container"> --}}
+      
+<div class="card">
+  
+	<div class="row">
+    
+		<aside class="col-sm-5 border-right">
+
+
+
+
+<div class="container-product" style="margin-top:10%; margin-left: 20px;">
+              <!-- PRODUCT SLIDER-->
+                <div class="row m-sm-0">
+                <div class="col-sm-2 p-sm-0 order-2 order-sm-1 mt-2 mt-sm-0">
+                  <div class="owl-thumbs d-flex flex-row flex-sm-column" data-slider-id="1">
+                    <div class="owl-thumb-item flex-fill mb-2 mr-2 mr-sm-0"><img class="w-100" src="https://{{details.image1}}" alt="..."></div>
+                    <div class="owl-thumb-item flex-fill mb-2 mr-2 mr-sm-0"><img class="w-100" src="https://{{details.image2}}" alt="..."></div>
+                    <div class="owl-thumb-item flex-fill mb-2 mr-2 mr-sm-0"><img class="w-100" src="https://{{details.image3}}" alt="..."></div>
+                    <div class="owl-thumb-item flex-fill mb-2"><img class="w-100" src="https://{{details.image4}}" alt="..."></div>
+                  </div>
+                </div>
+                <div class="col-sm-10 order-1 order-sm-2">
+                  <div class="owl-carousel product-slider" data-slider-id="1"><a class="d-block" href="https://{{details.image1}}" data-lightbox="product" title="Product item 1"><img class="img-fluid" src="https://{{details.image1}}" alt="..."></a><a class="d-block" href="https://{{details.image2}}" data-lightbox="product" title="Product item 2"><img class="img-fluid" src="https://{{details.image2}}" alt="..."></a><a class="d-block" href="https://{{details.image3}}" data-lightbox="product" title="Product item 3"><img class="img-fluid" src="https://{{details.image3}}" alt="..."></a><a class="d-block" href="https://{{details.image4}}" data-lightbox="product" title="Product item 4"><img class="img-fluid" src="https://{{details.image4}}" alt="..."></a></div>
+                </div>
+                
+              </div>
+             
+</div>
+
+{{#if flag.msg}}
+    <form action="/market/{{prodId}}" method="POST">
+<label for="nme" style="margin-left: 10%; font-family: Roboto; font-size:25px; color:black;">What's your Bid?</label><br><div style="display:inline-block" id="container"></div>
+
+
+<script>
+   let values = [];
+    var curr = parseInt("{{details.currentbid}}");
+    let inc = 0;
+    if(curr<100)
+    {
+      inc = 10;
+    }
+    else if(curr>=100 && curr<=500)
+    {
+      inc = 25; 
+    }
+    else if(curr>500 && curr<=1000)
+    {
+      inc = 50;
+    }
+    else if(curr>1000 && curr<=2000)
+    {
+      inc = 100;
+    }
+    else if(curr>2000 && curr<=5000)
+    {
+      inc = 150;
+    }
+        else if(curr>5000 && curr<=10000)
+    {
+      inc = 200;
+    }
+        else if(curr>10000 && curr<=25000)
+    {
+      inc = 250;
+    }
+        else if(curr>25000 && curr<=50000)
+    {
+      inc = 500;
+    }
+            else if(curr>50000 && curr<=100000)
+    {
+      inc = 1000;
+    }
+            else if(curr>100000 && curr<=200000)
+    {
+      inc = 1500;
+    }
+                else if(curr>200000 && curr<=500000)
+    {
+      inc = 2000;
+    }
+            else if(curr>500000 && curr<=1000000)
+    {
+      inc = 5000;
+    }
+                    else if(curr>1000000 && curr<=2500000)
+    {
+      inc = 10000;
+    }
+                else if(curr>2500000 && curr<=10000000)
+    {
+      inc = 25000
+    }
+    else
+    {
+      inc = 500000;
+    }
+
+    for(var i = 1; i<=10; i++)
+    {
+      var x = curr + (inc*i);
+      values.push(x.toString());
+    }
+    var select = document.createElement("select");
+    select.name = "bid";
+    select.id = "bid"
+ 
+    for (var val of values)
+    {
+        var option = document.createElement("option");
+        option.value = parseInt(val);
+        option.text = val.charAt(0).toUpperCase() + val.slice(1);
+        select.appendChild(option);
+    }
+ 
+
+ 
+    document.getElementById("container").appendChild(select);
+
+</script>
+
+{{!-- 
+  <input type="number" min="0" name="bid" class="bidinput" /> --}}
+
+
+  <input type="submit" class="text-uppercase my-2 bidbutton" value="PLace Bid">
+</form>
+    {{/if}}
+
+{{#if highestBid.msg}}
+           <div class="alert alert-success">
+            {{highestBid.msg}}</div>
+            {{/if}}
+		</aside>
+		<aside class="col-sm-7">
+      {{#if biddercount}}
+                <div style="display:inline-block;" class="infomessage">
+                  {{#if biddercount.count}}
+              Number of bidders bidding: {{biddercount.count}}
+              {{else}}
+              {{biddercount.countzero}}
+              {{/if}}
+                </div>
+              {{/if}}
+
+ 
+
+              {{#if prodReport.msg}}
+               <a style="color:white; display:inline-block;" class='my-3 mx-3 float-right btn btn-danger trigger-btn' data-toggle='modal'>Reported <i class="fas fa-check"></i></a>
+              {{else}}
+              <a style="display:inline-block;" href='#myModal' id="report"  class='my-3 mx-3 float-right btn btn-danger trigger-btn' data-toggle='modal'>Report</a>
+              {{/if}}
+
+
+
+<article class="card-body p-5">
+
+
+<form method = 'POST' onsubmit="change();" action = '/report/{{details._id}}'>
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+     
+			<div class="modal-header">
+				<div style="display: inline-block;" class="icon-box">
+					<i class="fa fa-flag"></i>
+				</div>				
+        
+				<h4 style="display:inline-block;" class="modal-title">Report this product?</h4>	
+        
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<p>Please describe your reason in a few words. This cannot be undone.</p>
+        <input type="text" name="report" style="padding:10px; margin:10px 0;  border: 2px solid #f15e5e; border-radius:10px; width:100%;">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info" data-dismiss="modal">Cancel</button>
+				<input type="submit"  class="btn btn-danger" value="Report"></input>
+			</div>
+      
+		</div>
+	</div>
+</div>  
+</form> 
+
+
+
+    {{# each details }}
+	<h3 class="title mb-3">{{this.name}}</h3>
+{{/each}}
+<p class="price-detail-wrap"> 
+	<span class="price h3" style="color:purple;"> 
+        Current Bid: ₹
+        {{# each details}}
+		<span class="num">{{this.currentbid}}</span>
+        {{/each}}
+	</span>
+</p> <!-- price-detail-wrap .// -->
+
+<dl class="item-property">
+  <dt>Description</dt>
+  {{# each details}}
+  <dd><p>{{this.description}}</p></dd>
+   {{/each}}
+</dl>
+
+<div class="demo">
+  <div id="countdown">
+      Time Left:
+    <ul>
+      <li><span id="days"></span>days</li>
+      <li><span id="hours"></span>Hours</li>
+      <li><span id="minutes"></span>Minutes</li>
+      <li><span id="seconds"></span>Seconds</li>
+    </ul>
+  </div>
+</div>  <!-- item-property-hor .// -->
+
+<hr>
+	<div class="row">
+		<div class="col-sm-5">
+			
+     {{#if message}}
+    <div class="biderror">
+        <h4>{{message}}</h4>
+    </div>
+    {{/if}}
+		</div> <!-- col.// -->
+		<div class="col-sm-7">
+			{{#if flag2.msg}}
+    <h4><a class="btn btn-primary"href="/editproduct/{{prodId}}">Edit Product Details</a></h4>
+   
+    {{/if}}
+
+    {{#if flag3.msg}}
+    <a class="btn btn-success" href="/extend/{{prodId}}">Extend Deadline</a>
+    {{/if}}
+		</div> <!-- col.// -->
+	</div> <!-- row.// -->
+	<hr>
+</article> <!-- card-body.// -->
+		</aside> <!-- col.// -->
+	</div> <!-- row.// -->
+</div> <!-- card.// -->
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/lightbox2/js/lightbox.min.js"></script>
+    <script src="/vendor/nouislider/nouislider.min.js"></script>
+    <script src="/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="/vendor/owl.carousel2/owl.carousel.min.js"></script>
+    <script src="/vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
+    {{!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.2.min.js"></script> --}}
+    <script src="/js/front.js"></script>
+    <script>
+      function injectSvgSprite(path) {
+        
+            var ajax = new XMLHttpRequest();
+            ajax.open("GET", path, true);
+            ajax.send();
+            ajax.onload = function(e) {
+            var div = document.createElement("div");
+            div.className = 'd-none';
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+            }
+        }
+        </script>
+
+
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>SignUp to Bidder</title>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="all,follow">
+
+	<!-- Bootstrap CSS-->
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!-- Lightbox-->
+	<link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
+	<!-- Range slider-->
+	<link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+	<!-- Bootstrap select-->
+	<link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
+	<!-- Owl Carousel-->
+	<link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.theme.default.css">
+	<!-- Google fonts-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+	<!-- theme stylesheet-->
+	<link rel="stylesheet" href="css/custom.css" />
+	<link rel="stylesheet" href="css/style.violet.css" id="theme-stylesheet">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/favicon.png">
+	<style>
+       @import url(https://fonts.googleapis.com/css?family=Varela);
+
+
+
+	   .error-msg {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color: #D8000C;
+  background-color: #FFBABA;
+  width:max-content;
+  margin-left:150px;
+  z-index: 1;
+
+
+}
+
+
+body {
+	background-image: url("images/registerbg.png");
+	background-size: 1000px;
+	background-position: center;
+  font-family: 'Varela', sans-serif;
+  font-size: 14px;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+label {
+  margin-top: 6px;
+  line-height: 17px;
+}
+
+a {
+  color: #fff;
+}
+
+a:focus,
+a:hover {
+  color: #008080;
+}
+
+.checkbox-inline+.checkbox-inline,
+.radio-inline+.radio-inline {
+  margin-top: 6px;
+}
+
+/******* Login Page *******/
+
+{{!-- body.login {
+  background: rgba(241, 242, 181, 1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(19, 80, 88, 1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(19, 80, 88, 1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(19, 80, 88, 1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(19, 80, 88, 1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(19, 80, 88, 1) 100%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(19, 80, 88, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f1f2b5', endColorstr='#135058', GradientType=1);
+} --}}
+
+.relative {
+  position: relative;
+}
+
+.login-container-wrapper .logo,
+.login-container-wrapper .welcome {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.login-container-wrapper .logo {
+  text-align: center;
+  position: absolute;
+  top: -42px;
+  margin: 0 auto;
+  width: 25%;
+  left: 37.5%;
+  border-radius: 50%;
+  background-color: #344455;
+  padding: 25px;
+  box-shadow: 0px 0px 9px 2px #344454;
+}
+
+.login-container-wrapper {
+  max-width: 400px;
+  margin: 10% auto 8%;
+  padding: 40px;
+  box-sizing: border-box;
+  background: rgba(57, 89, 116, 0.8);
+  box-shadow: 1px 1px 10px 1px #000000, 8px 8px 0px 0px #344454, 12px 12px 10px 0px #000000;
+  position: relative;
+  padding-top: 80px;
+}
+
+.logo .fa {
+  font-size: 50px;
+}
+.login input:focus + .fa{
+  color:#fff;
+}
+.login-form .form-group {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.login-form i {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: #93a5ab;
+}
+
+.login-form .input-lg {
+  font-size: 16px;
+  height: 52px;
+  padding: 10px 25px;
+  border-radius: 0;
+}
+
+.login input[type="email"],
+.login input[type="password"],
+.login input:focus {
+  background-color: rgba(40, 52, 67, 0.75);
+  border: 1px solid #4a525f;
+  color: #eee;
+  border-left: 4px solid #93a5ab;
+}
+
+.login input:focus {
+  border-left: 4px solid #ccd8da;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: rgba(40, 52, 67, 0.75)!important;
+  background-image: none;
+  color: rgb(0, 0, 0);
+  border-color: #FAFFBD;
+}
+
+.login .checkbox label,
+.login .checkbox a {
+  color: #ddd;
+}
+
+.btn-success {
+  background-color: transparent;
+  background-image: none;
+  padding: 8px 50px;
+  border-radius: 0;
+  border: 2px solid #93a5ab;
+  box-shadow: inset 0 0 0 0 #7692A7;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+
+.btn-success:focus,
+.btn-success:hover,
+.btn-success.active,
+.btn-success:active {
+  background-color: transparent;
+  border-color: #fff;
+  box-shadow: inset 0 0 100px 0 #7692A7;
+  color: #FFF;
+}
+#particles-js {
+/*   background: cornflowerblue; */
+  width:100%;
+  height:100%;
+  position:absolute;
+  z-index:-1;
+}
+	</style>
+</head>
+<body>
+	{{> logreg_nav}}
+	{{#if message}}
+ <div class="error-msg">
+  <i class="fa fa-times-circle"></i>
+  {{message}}
+ </div>
+{{/if}}
+
+
+	<section>
+	<div class="container" style="position:relative; margin-top:-85px;">
+		<div class="login-container-wrapper clearfix">
+			<div class="logo">
+				<i class="fas fa-sign-in-alt"></i>
+			</div>
+			<div class="welcome"><strong>Please verify your email by filling up the OTP here</strong> </div>
+
+			<form action="/verify"  method="POST"  class="form-horizontal login-form">
+				<div class="form-group relative">
+					<input type="number" name="otp" placeholder="Enter the OTP" class="form-control form-control-lg" required />
+					<i class="fa fa-user"></i>
+				</div>
+			  <div class="form-group">
+			    <input type="submit" value="Verify" class="btn btn-primary btn-lg btn-block signin-btn text-uppercase mb-4" >
+			  </div>
+		
+				
+			</form>
+		</div>
+	</div>
+
+	</section>
+
+
+	<!-- JavaScript files-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="vendor/lightbox2/js/lightbox.min.js"></script>
+	<script src="vendor/nouislider/nouislider.min.js"></script>
+	<script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+	<script src="vendor/owl.carousel2/owl.carousel.min.js"></script>
+	<script src="vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
+	{{!-- <script src="js/front.js"></script> --}}
+
+	<!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</body>
+</html>

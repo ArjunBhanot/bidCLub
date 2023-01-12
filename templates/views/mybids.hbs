@@ -1,0 +1,369 @@
+<!DOCTYPE html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <title>My Bids</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Lightbox-->
+    <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
+    <!-- Range slider-->
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+    <!-- Bootstrap select-->
+    <link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
+    <!-- Owl Carousel-->
+    <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl.carousel2/assets/owl.theme.default.css">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/style.violet.css" id="theme-stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+
+
+<style>
+
+    
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color:#A7A1AE;
+  background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%231d1422' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%233a2944' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23573d66' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23745288' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%239166AA' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+ 
+}
+
+h1 {
+  font-size:3em; 
+  font-weight: 300;
+  line-height:1em;
+  text-align: center;
+  color: #4DC3FA;
+}
+
+h2 {
+  font-size:1em; 
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height:1em;
+  padding-bottom: 2em;
+  color: #FB667A;
+}
+
+h2 a {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FB667A;
+  text-decoration: none;
+}
+
+.blue { color: #185875; }
+.purple { color: #9055A2; }
+
+.containert th h1 {
+	  font-weight: bold;
+	  font-size: 1em;
+  text-align: left;
+  color: #185875;
+}
+
+.containert td {
+	  font-weight: normal;
+	  font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
+	        box-shadow: 0 2px 2px -2px #0E1119;
+        color:white;
+}
+
+.containert {
+	  text-align: left;
+	  overflow: hidden;
+	  width: 80%;
+	  margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+}
+
+.containert td, .containert th {
+	  padding-bottom: 2%;
+	  padding-top: 2%;
+  padding-left:2%;  
+}
+
+/* Background-color of the odd rows */
+.containert tr:nth-child(odd) {
+	  background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+.containert tr:nth-child(even) {
+	  background-color: #2C3446;
+}
+
+.containert th {
+	  background-color: #ebeef3;
+}
+
+.containert td:first-child { color: #FB667A; }
+
+.containert tr:hover {
+   background-color: #464A52;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+	        box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.containert td:hover {
+  background-color: #b688f1;
+  color: #f5f5f3;
+  font-weight: bold;
+  
+  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  
+  transition-delay: 0s;
+	  transition-duration: 0.4s;
+	  transition-property: all;
+  transition-timing-function: line;
+}
+
+@media (max-width: 800px) {
+.containert td:nth-child(4),
+.containert th:nth-child(4) { display: none; }
+}
+    </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+
+ <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</style>
+
+
+
+</head>
+<body>
+    
+<ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+
+
+{{> market_nav }}
+    {{#if message}}
+    <div>
+        <h1>{{message}}</h1>
+    </div>
+    {{/if}}
+
+    <div class="container py-5">
+        <section class="hero pb-3 bg-cover bg-center d-flex align-items-center rounded opacity-50" style="background: url(images/bid1.png)">
+            <div class="container py-5">
+                <div class="row px-4 px-lg-5">
+                    <div class="col-lg-6" style="margin-top:100px;">
+                        <p class=" small text-uppercase mb-2" style="color:rgb(255, 255, 255);">THE BIDDING REVOLUTION IS HERE</p>
+                        <h3 class="h2 text-uppercase mb-3" style="font-family: roboto; color:rgb(255, 255, 255);">YOUR BIDS</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    {{!-- <div class="cart_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cart_container">
+                        <div class="cart_title" style="font-family: roboto;">Products you have bidded on<small> ( 'X' items in your cart) </small></div>
+                        {{#each prodDetails }}
+                        <div class="cart_items">
+                            <ul class="cart_list">
+                                <li class="cart_item clearfix">
+                                    <div class="cart_item_image"><img src="https://i.imgur.com/qqBRWD5.jpg" alt=""></div>
+                                    <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                                        <div class="cart_item_name cart_info_col">
+                                            <div class="cart_item_title">ID</div>
+                                            <div class="cart_item_text">{{this.id}}</div>
+                                        </div>
+                                        <div class="cart_item_color cart_info_col">
+                                            <div class="cart_item_title">Seller ID</div>
+                                            <div class="cart_item_text"><span style="background-color:#999999;"></span>{{this.sellerid}}</div>
+                                        </div>
+                                        <div class="cart_item_total cart_info_col">
+                                            <div class="cart_item_title">Bid Amount</div>
+                                            <div class="cart_item_text">{{this.bidamount}}</div>
+                                        </div>
+                                        <div class="cart_item_total cart_info_col">
+                                            <div class="cart_item_title">See Product Details</div>
+                                            <div class="cart_item_text"><h2><a class="btn btn-primary" href="/market/{{this.prodid}}" style="font-family: Helvetica; ">Details Page</a></h2></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+
+
+
+
+<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table containert">
+						  <thead class="thead-primary">
+						    <tr>
+						    	<th>Product Image</th>
+						    	<th>Product</th>
+						      <th>Time left</th>
+    
+						      <th>Starting bid</th>
+						      <th>Your bid</th>
+						      <th>Current bid</th>
+                              <th> See Product Details</th>
+						     
+						 
+						    </tr>
+						  </thead>
+						  <tbody id="result">
+                              
+						    
+                        {{#each prodDetails}}
+
+                        <tr><td rowspan="2"><img class ="mypimage" height = '50' width = '50' src = "https://{{this.image1}}"></td>
+
+                        <script>
+                            
+                            var pname="{{this.name}}";
+                            var startingbid="{{this.startingbid}}";
+                            var currentbid="{{this.currentbid}}";   
+                            var yourbid="{{this.image2}}";
+                            var timel;
+                            var initDate = new Date("{{this.date}}");
+                                            var activetime = parseInt("{{this.activetime}}");
+                                            initDate.setHours(initDate.getHours() + activetime);
+                                            var countDownDate = initDate.getTime();
+                                            var now = new Date().getTime(); 
+                                            var distance = countDownDate - now;
+
+                                            if(distance>0){
+                                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                            }
+
+                                            if(days>0)
+                                            {
+                                            timel = days + " days " + hours +' hours';
+                                            }
+                                            else if(hours>0)
+                                            {
+                                                timel = hours + " hours " + minutes + " minutes";
+                                            }
+                                            else if(minutes>0)
+                                            {
+                                                timel = minutes + " minutes";
+                                            }
+                                            else if(seconds>0)
+                                            {
+                                                timel = seconds + " seconds";
+                                            }
+                                            else
+                                            {
+                                                timel = "Time Over";
+                                            }
+                            
+                                           
+                                        var html="";
+                                        
+                                   
+
+                                        html="<td>"+pname+"</td><td>"+timel+"</td><td>"+startingbid+"</td><td>"+yourbid+"</td><td>"+currentbid+"</td><td><a class='btn btn-primary' href='/market/{{this._id}}'>See Details</a></td>";
+
+                                        document.getElementById("result").innerHTML += html;
+                                        
+                            
+
+
+                            </script>
+                            </tr>
+                        {{/each}}
+
+
+						  </tbody>
+						</table>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+</div>
+
+
+
+
+
+  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/lightbox2/js/lightbox.min.js"></script>
+    <script src="vendor/nouislider/nouislider.min.js"></script>
+    <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="vendor/owl.carousel2/owl.carousel.min.js"></script>
+    <script src="vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
+    <script src="js/front.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+
+</body>
+</html>

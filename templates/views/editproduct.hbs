@@ -1,0 +1,251 @@
+<!DOCTYPE html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{{details.name}}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Lightbox-->
+    <link rel="stylesheet" href="/vendor/lightbox2/css/lightbox.min.css">
+    <!-- Range slider-->
+    <link rel="stylesheet" href="/vendor/nouislider/nouislider.min.css">
+    <!-- Bootstrap select-->
+    <link rel="stylesheet" href="/vendor/bootstrap-select/css/bootstrap-select.min.css">
+    <!-- Owl Carousel-->
+    <link rel="stylesheet" href="/vendor/owl.carousel2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/vendor/owl.carousel2/assets/owl.theme.default.css">
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="/css/style.violet.css" id="theme-stylesheet">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/img/favicon.png">
+<script>
+        // Set the date we're counting down to
+
+        var initDate = new Date("{{initDate}}");
+        var activetime = parseInt("{{activetime}}");
+        
+        initDate.setHours(initDate.getHours() + activetime);
+
+        //var nx = new Date(initDate);
+        var countDownDate = initDate.getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            if(distance>0){
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+            }
+
+            // If the count down is over, write some text
+            else{
+                clearInterval(x);
+                document.getElementById("days").innerText = "0";
+                document.getElementById("hours").innerText = "0";
+                document.getElementById("minutes").innerText = "0";
+                document.getElementById("seconds").innerText = "0";
+
+            }
+        }, 10);
+
+    </script>
+<style>
+  body{
+    background-color: #D2FEFF;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23D2FEFF'/%3E%3Cstop offset='1' stop-color='%23D09AFF'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+  }
+   #inp{
+            border: 1px solid black;
+            border-radius: 15px;
+            box-shadow: rgb(104, 62, 7);
+        }
+</style>
+</head>
+<body class="prodbg">
+    {{> market_nav}}
+
+   
+
+    <div class="page-title-overlap bg-dark pt-4" style="height: 140px;">
+        <div class="container d-lg-flex justify-content-between py-2 py-lg-3">
+          <div class="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
+          </div>
+          <div class="order-lg-1 pe-lg-4 text-center text-lg-start">
+             
+              {{#each details}}
+            <h1 class="h3 text-light mb-0">{{this.name}}</h1>
+            {{/each}}
+
+
+
+          </div>
+        </div>
+      </div>
+<div class="prod-profile">
+
+
+
+{{!-- <div class="container"> --}}
+<div class="card">
+	<div class="row">
+		<aside class="col-sm-5 border-right">
+
+
+
+
+<div class="container-product" style="margin-top:10%; margin-left: 20px;">
+              <!-- PRODUCT SLIDER-->
+                <div class="row m-sm-0">
+                <div class="col-sm-2 p-sm-0 order-2 order-sm-1 mt-2 mt-sm-0">
+                  <div class="owl-thumbs d-flex flex-row flex-sm-column" data-slider-id="1">
+                    <div class="owl-thumb-item flex-fill mb-2 mr-2 mr-sm-0"><img class="w-100" src="https://{{details.image1}}" alt="..."></div>
+                    <div class="owl-thumb-item flex-fill mb-2 mr-2 mr-sm-0"><img class="w-100" src="https://{{details.image2}}" alt="..."></div>
+                    <div class="owl-thumb-item flex-fill mb-2 mr-2 mr-sm-0"><img class="w-100" src="https://{{details.image3}}" alt="..."></div>
+                    <div class="owl-thumb-item flex-fill mb-2"><img class="w-100" src="https://{{details.image4}}" alt="..."></div>
+                  </div>
+                </div>
+                <div class="col-sm-10 order-1 order-sm-2">
+                  <div class="owl-carousel product-slider" data-slider-id="1"><a class="d-block" href="https://{{details.image1}}" data-lightbox="product" title="Product item 1"><img class="img-fluid" src="https://{{details.image1}}" alt="..."></a><a class="d-block" href="https://{{details.image2}}" data-lightbox="product" title="Product item 2"><img class="img-fluid" src="https://{{details.image2}}" alt="..."></a><a class="d-block" href="https://{{details.image3}}" data-lightbox="product" title="Product item 3"><img class="img-fluid" src="https://{{details.image3}}" alt="..."></a><a class="d-block" href="https://{{details.image4}}" data-lightbox="product" title="Product item 4"><img class="img-fluid" src="https://{{details.image4}}" alt="..."></a></div>
+                </div>
+              </div>
+</div>
+
+
+		</aside>
+		<aside class="col-sm-7">
+      <form action="/editproduct/{{prodId}}" method="POST" id="editform">
+      {{#if biddercount}}
+                <div class="infomessage">
+              Number of bids placed: {{biddercount.count}}
+                </div>
+              {{/if}}
+<article class="card-body p-5">
+    {{# each details }}
+	<h3 class="title mb-3">{{this.name}}</h3>
+{{/each}}
+<p class="price-detail-wrap"> 
+	<span class="price h3" style="color:purple;"> 
+        Enter New Base Price: ₹
+        <input type="number" min="1" name="startingbid" id="inp" class="form-control-sm"/>
+	</span>
+
+</p> <!-- price-detail-wrap .// -->
+
+<dl class="item-property">
+  <dt>Description</dt>
+   <textarea name="description" form="editform"  rows="3" class = "form-control" required>{{details.description}}</textarea>
+   
+</dl>
+
+<div class="demo">
+  <div id="countdown">
+      Time Left:
+    <ul>
+      <li><span id="days"></span>days</li>
+      <li><span id="hours"></span>Hours</li>
+      <li><span id="minutes"></span>Minutes</li>
+      <li><span id="seconds"></span>Seconds</li>
+    </ul>
+  </div>
+</div> 
+ <!-- item-property-hor .// -->
+
+ Enter Time Extension in hours :  <input type="number" min="0" value="2" id="inp" class="form-control-sm" name="extendTime" />
+
+<hr>
+	<div class="row">
+		<div class="col-sm-5">
+			
+     {{!-- {{#if message}}
+    <div class="biderror">
+        <h4>{{message}}</h4>
+    </div>
+    {{/if}} --}}
+    <input type="submit" class="btn btn-primary"value="Edit Details" />
+		</div> <!-- col.// -->
+		<div class="col-sm-7">
+
+		</div> <!-- col.// -->
+	</div> <!-- row.// -->
+	<hr>
+</article> <!-- card-body.// -->
+</form>
+		</aside> <!-- col.// -->
+	</div> <!-- row.// -->
+</div> <!-- card.// -->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/lightbox2/js/lightbox.min.js"></script>
+    <script src="/vendor/nouislider/nouislider.min.js"></script>
+    <script src="/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="/vendor/owl.carousel2/owl.carousel.min.js"></script>
+    <script src="/vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
+    {{!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.2.min.js"></script> --}}
+    <script src="/js/front.js"></script>
+    <script>
+document.getElementById("Overly").addEventListener("click", function(){
+ var e =document.getElementsByClassName("modalbox");
+
+        e[0].style.display = 'block';
+   
+})	;
+document.getElementById("close").addEventListener("click", function(){
+   var e =document.getElementsByClassName("modalbox");
+ e[0].style.display= 'none';
+});
+
+      function injectSvgSprite(path) {
+        
+            var ajax = new XMLHttpRequest();
+            ajax.open("GET", path, true);
+            ajax.send();
+            ajax.onload = function(e) {
+            var div = document.createElement("div");
+            div.className = 'd-none';
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+            }
+        }
+        </script>
+
+
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+</body>
+</html>
