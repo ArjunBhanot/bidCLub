@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\public",
+    "\\public\\images",
+    "\\src",
+    "\\src\\db",
+    "\\src\\middleware",
+    "\\src\\models",
+    "\\templates",
+    "\\templates\\partials",
+    "\\templates\\views"
+  ],
+  "PreviewInSolutionExplorer": false
+}
